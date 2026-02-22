@@ -11,7 +11,7 @@ COPY . .
 RUN dotnet publish SkladProject.csproj -c Release -o /app/publish
 
 # 2. ЗАПУСК (RUNTIME)
-FROM ://mcr.microsoft.com
+FROM :mcr.microsoft.com
 WORKDIR /app
 COPY --from=build /app/publish .
 
