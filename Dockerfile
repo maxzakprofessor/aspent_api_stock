@@ -1,23 +1,23 @@
 # 1. ЭТАП СБОРКИ (SDK)
 FROM ://mcr.microsoft.com AS build
-WORKDIR /app
+WORKDIR /src
 
-# Копируем файлы проекта и восстанавливаем зависимости
-COPY *.csproj ./
-RUN dotnet restore
+# Копируем файл проекта отдельно для кэширования слоев
+COPY SkladProject.csproj ./
+RUN dotnet restore SkladProject.csproj
 
-# Копируем всё остальное и собираем релиз
-COPY . ./
-RUN dotnet publish -c Release -o out
+# Копируем всё остальное и собираем
+COPY . .
+RUN dotnet publish SkladProject.csproj -c Release -o /app/publish /p:UseAppHost=false
 
 # 2. ЭТАП ЗАПУСКА (RUNTIME)
-# Используем .NET 9 Runtime, так как он стабильнее на Render
 FROM ://mcr.microsoft.com
 WORKDIR /app
-COPY --from=build /app/out .
+COPY --from=build /app/publish .
 
-# Открываем порт (Render по умолчанию ищет 80 или 10000)
+# Render требует порт 10000 или 80
 ENV ASPNETCORE_URLS=http://+:10000
 EXPOSE 10000
 
+# Указываем точное имя DLL (проверьте, что проект называется SkladProject)
 ENTRYPOINT ["dotnet", "SkladProject.dll"]
