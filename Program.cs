@@ -67,6 +67,12 @@ app.MapControllers();
 // --- 6. SEED DATA: АВТОСОЗДАНИЕ АДМИНА ---
 using (var scope = app.Services.CreateScope())
 {
+        // 1. Получаем контекст базы данных
+    var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
+    
+    // 2. КРИТИЧЕСКИ ВАЖНО: Создаем таблицы, если их нет (решает ошибку no such table)
+    await db.Database.MigrateAsync();
+    
     var userManager = scope.ServiceProvider.GetRequiredService<UserManager<IdentityUser>>();
     var adminUser = await userManager.FindByNameAsync("admin");
     
