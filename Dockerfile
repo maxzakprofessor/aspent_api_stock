@@ -1,5 +1,5 @@
 # 1. СБОРКА (SDK)
-FROM mcr.microsoft.com/dotnet/sdk:9.0 AS build
+FROM mcr.microsoft.com/dotnet/sdk:10.0 AS build
 WORKDIR /src
 
 # Копируем файл проекта (Убедись, что он называется SkladProject.csproj)
@@ -11,7 +11,7 @@ COPY . .
 RUN dotnet publish SkladProject.csproj -c Release -o /app/publish
 
 # 2. ЗАПУСК (RUNTIME)
-FROM mcr.microsoft.com/dotnet/sdk:9.0
+FROM mcr.microsoft.com/dotnet/sdk:10.0
 WORKDIR /app
 COPY --from=build /app/publish .
 
