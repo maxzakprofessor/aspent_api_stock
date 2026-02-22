@@ -1,23 +1,23 @@
-# 1. ЭТАП СБОРКИ (SDK)
-FROM ://mcr.microsoft.com AS build
+# 1. СБОРКА (SDK)
+FROM :mcr.microsoft.com AS build
 WORKDIR /src
 
-# Копируем файл проекта (УБЕДИСЬ, ЧТО ОН НАЗЫВАЕТСЯ SkladProject.csproj)
+# Копируем файл проекта (Убедись, что он называется SkladProject.csproj)
 COPY SkladProject.csproj ./
 RUN dotnet restore SkladProject.csproj
 
-# Копируем остальное и собираем
+# Копируем всё остальное и собираем релиз
 COPY . .
 RUN dotnet publish SkladProject.csproj -c Release -o /app/publish
 
-# 2. ЭТАП ЗАПУСКА (RUNTIME)
+# 2. ЗАПУСК (RUNTIME)
 FROM ://mcr.microsoft.com
 WORKDIR /app
 COPY --from=build /app/publish .
 
-# Настройка порта для Render
+# Настройка порта для Render (обязательно 10000)
 ENV ASPNETCORE_URLS=http://+:10000
 EXPOSE 10000
 
-# Убедись, что итоговый файл называется SkladProject.dll
+# Имя DLL должно совпадать с именем проекта
 ENTRYPOINT ["dotnet", "SkladProject.dll"]
