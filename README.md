@@ -32,6 +32,11 @@ Implemented SQL query minimization strategies across all ORMs:
 *   **Hibernate:** Using `JOIN FETCH` and `FetchType.LAZY` strategies.
 
 ### 2. Stateless Auth & JWT (Security)
+*   Across all stacks, a unified **Stateless JWT** architecture is implemented:
+    **.NET 10:** ASP.NET Core **JwtBearer Authentication** & Microsoft Identity.
+    **Java 25:** **Spring Security** with **JJWT** (Java JWT) integration.
+    **Python:** **Simple JWT** for Django REST Framework.
+
 *   **JWT:** A Stateless architecture was chosen to allow horizontal API scaling in Docker containers without server session affinity.
 *   **Security Flow:** Implemented Role-Based Access Control (RBAC), password hashing (BCrypt/PBKDF2), and a `needsPasswordChange` mechanism (enforced temporary password change on first login).
 *   **CORS Policy:** Strict filtering of trusted Origins to protect the API from unauthorized cross-origin requests.
@@ -106,6 +111,12 @@ Fullstack Developer and System Migration Architect.
 *   **Hibernate:** Использование `JOIN FETCH` и стратегии `FetchType.LAZY`.
 
 ### 2. Stateless Auth & JWT (Безопасность)
+*   Во всех стеках реализована единая **Stateless JWT** архитектура:
+    **.NET 10:** **JwtBearer Authentication** и Microsoft Identity.
+    **Java 25:** **Spring Security** с интеграцией **JJWT** (Java JWT).
+    **Python:** **Simple JWT** для Django REST Framework.
+    **Безопасность:** Ролевая модель (RBAC), хэширование BCrypt/PBKDF2 и принудительная смена пароля.
+
 *   **JWT:** Выбрана Stateless-архитектура, позволяющая масштабировать API горизонтально в Docker-контейнерах без привязки к сессиям сервера.
 *   **Security Flow:** Реализована ролевая модель (RBAC), хэширование паролей (BCrypt/PBKDF2) и механизм `needsPasswordChange` (обязательная смена временного пароля при первом входе).
 *   **CORS Policy:** Настроена строгая фильтрация доверенных источников (Origins), защищающая API от несанкционированного доступа.
