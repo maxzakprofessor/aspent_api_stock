@@ -41,8 +41,8 @@ public class AnalyticsController : ControllerBase
     public async Task<IActionResult> GetBalances(string wStock, string wGood) {
         var res = await CalculateBalances();
         // ПРИМЕНЯЕМ ОБА ФИЛЬТРА (Как в твоем Django проекте) [INDEX]
-        if (wStock != "Все") res = res.Where(r => r.NameStock == wStock).ToList();
-        if (wGood != "Все") res = res.Where(r => r.NameGood == wGood).ToList();
+        if (wStock != "All") res = res.Where(r => r.NameStock == wStock).ToList();
+        if (wGood != "All") res = res.Where(r => r.NameGood == wGood).ToList();
         return Ok(res);
     }
 
