@@ -63,8 +63,8 @@ Fullstack Developer and System Migration Architect.
 [Watch Sklad Pro AI Demo (OneDrive)](https://1drv.ms/v/c/f07141fbcbb39609/IQCqTOpBmzeSSJnZTzPWCto4AQcHprcYbQz-J_JbNYNCcbk?e=bTkgfr)
 
 ## 🌐 Live Demo Stands
-*   ☁️ **Backend ASP.NET Core API (Render):** `aspent-api-stock.onrender.com`
-*   ☁️ **Backend (Pythonanywhere):** [Admin Panel](https://mzakiryanovgmailcom.pythonanywhere.com)
+*   ☁️ **Backend ASP.NET Core API (Render):** [Render](https://aspent-api-stock.onrender.com/api/goods))
+*   ☁️ **Backend (Pythonanywhere):** [Admin Panel](https://mzakiryanovgmailcom.pythonanywhere.com/admin/login/?next=/admin/)
 *   ☁️ **Frontend (Vercel):** [angular-api-stock.vercel.app](https://angular-api-sklad.vercel.app/)
 
 ## ✅ Project Status
@@ -141,7 +141,7 @@ Fullstack-разработчик и архитектор миграции сис
 [Смотреть демонстрацию Sklad Pro AI (OneDrive)](https://1drv.ms/v/c/f07141fbcbb39609/IQCqTOpBmzeSSJnZTzPWCto4AQcHprcYbQz-J_JbNYNCcbk?e=bTkgfr)
 
 ## 🌐 Демо-стенды в облаке
-*   ☁️ **Backend ASP.NET Core API (Render):** `aspent-api-stock.onrender.com`
+*   ☁️ **Backend ASP.NET Core API (Render):** [Render](https://aspent-api-stock.onrender.com/api/goods))
 *   ☁️ **Backend (Pythonanywhere):** [Панель администратора](https://mzakiryanovgmailcom.pythonanywhere.com)
 *   ☁️ **Frontend (Vercel):** [angular-api-stock.vercel.app](https://angular-api-sklad.vercel.app/)
 
