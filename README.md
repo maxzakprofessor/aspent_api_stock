@@ -36,14 +36,7 @@ Implemented SQL query minimization strategies across all ORMs:
 *   **Security Flow:** Implemented Role-Based Access Control (RBAC), password hashing (BCrypt/PBKDF2), and a `needsPasswordChange` mechanism (enforced temporary password change on first login).
 *   **CORS Policy:** Strict filtering of trusted Origins to protect the API from unauthorized cross-origin requests.
 
-### 3. ✨ Frontend: Angular 19+ (Next-Gen Reactive UI)
-*   **Signals Everywhere:** Full implementation of **Angular Signals** for fine-grained reactivity, replacing zone.js dependency where possible for ultimate performance.
-*   **Modern Architecture:** Standalone Components, Control Flow Syntax (@if, @for), and Functional Interceptors.
-*   **Performance:** Hybrid rendering (SSR/SSG) for instant load times and optimized Change Detection.
-*   **State Management:** Reactive state handling using Signals and RxJS streams.
-
-
-### 4. DevOps & Containerization
+### 3. DevOps & Containerization
 *   **Docker Multi-stage Build:** Image optimization by separating build (SDK) and runtime stages.
 *   **CI/CD Ready:** Fully prepared for automated deployment via Render, Azure, Vercel, and GitHub Actions.
 
@@ -117,12 +110,7 @@ Fullstack Developer and System Migration Architect.
 *   **Security Flow:** Реализована ролевая модель (RBAC), хэширование паролей (BCrypt/PBKDF2) и механизм `needsPasswordChange` (обязательная смена временного пароля при первом входе).
 *   **CORS Policy:** Настроена строгая фильтрация доверенных источников (Origins), защищающая API от несанкционированного доступа.
 
-### 3. SPA (Single Page Application) Architecture
-Фронтенд реализован как SPA, обеспечивая:
-*   **UX:** Мгновенную навигацию без перезагрузки страниц (Vue Router).
-*   **Efficiency:** Снижение нагрузки на сервер (рендеринг на стороне клиента, сервер отдает только чистый JSON).
-
-### 4. DevOps & Контейнеризация
+### 3. DevOps & Контейнеризация
 *   **Docker Multi-stage Build:** Оптимизация образов через разделение стадий сборки (SDK) и запуска (Runtime).
 *   **CI/CD Ready:** Полная готовность к автоматизированному деплою на Render, Azure, Vercel и GitHub Actions.
 
