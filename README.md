@@ -35,10 +35,12 @@ Implemented SQL query minimization strategies across all ORMs:
 *   **Security Flow:** Implemented Role-Based Access Control (RBAC), password hashing (BCrypt/PBKDF2), and a `needsPasswordChange` mechanism (enforced temporary password change on first login).
 *   **CORS Policy:** Strict filtering of trusted Origins to protect the API from unauthorized cross-origin requests.
 
-### 3. SPA (Single Page Application) Architecture
-The frontend is implemented as an SPA, providing:
-*   **UX:** Instant navigation without page reloads (Vue Router).
-*   **Efficiency:** Reduced server load (client-side rendering, server only serves raw JSON).
+### 3. ✨ Frontend: Angular 19+ (Next-Gen Reactive UI)
+*   **Signals Everywhere:** Full implementation of **Angular Signals** for fine-grained reactivity, replacing zone.js dependency where possible for ultimate performance.
+*   **Modern Architecture:** Standalone Components, Control Flow Syntax (@if, @for), and Functional Interceptors.
+*   **Performance:** Hybrid rendering (SSR/SSG) for instant load times and optimized Change Detection.
+*   **State Management:** Reactive state handling using Signals and RxJS streams.
+
 
 ### 4. DevOps & Containerization
 *   **Docker Multi-stage Build:** Image optimization by separating build (SDK) and runtime stages.
@@ -95,10 +97,11 @@ Fullstack Developer and System Migration Architect.
 *   **Запись событий:** Каждое действие (приемка ТМЦ, перемещение между складами или корректировка) фиксируется в виде JSON-документа. Это обеспечивает отказоустойчивость истории операций без нагрузки на основную реляционную БД.
 
 
-## ✨ Frontend & AI-Driven Development
-*   **Frontend:** Vue 3 (Composition API), Vite, Pinia, Axios Interceptors, Chart.js.
-*   **AI & Prompt Engineering:** Использование Gemini 2.0 Flash и GitHub Copilot для генерации бизнес-логики и архитектурного рефакторинга.
-*   **Data Science:** Применение ChatGPT Advanced Data Analysis для верификации математических моделей расчета ТМЦ.
+## ✨ Frontend: Angular 19+ (Реактивность нового поколения)
+*   **Angular Signals:** Полный переход на Сигналы для мелкозернистой реактивности и максимальной производительности интерфейса.
+*   **Modern Core:** Использование Standalone Components, нового синтаксиса Control Flow (@if, @for) и функциональных Interceptors.
+*   **Performance:** Оптимизированный рендеринг (SSR) и эффективное управление состоянием без лишних перерисовок.
+
 
 ## 🌟 Глубокая техническая экспертиза
 
