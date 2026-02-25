@@ -52,7 +52,7 @@ builder.Services.AddCors(options => {
         p.WithOrigins(
             "http://localhost:5173",             // Локальная разработка (Vue/Vite)
             "http://localhost:4200",             // Локальная разработка (Angular)
-            "https://angular-api-sklad.vercel.app" // Ваш основной фронтенд на Vercel
+            "https://angular-api-sklad-sho9.vercel.app" // Ваш основной фронтенд на Vercel
           )
           .AllowAnyMethod()
           .AllowAnyHeader()
