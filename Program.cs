@@ -46,10 +46,18 @@ builder.Services.AddAuthentication(x => {
 });
 
 // --- 5. CORS ---
-builder.Services.AddCors(options => {
-    options.AddPolicy("AllowVueApp", p => p.WithOrigins("http://localhost:5173").AllowAnyMethod().AllowAnyHeader());
-});
 
+builder.Services.AddCors(options => {
+    options.AddPolicy("AllowFrontend", p => 
+        p.WithOrigins(
+            "http://localhost:5173",             // Локальная разработка (Vue/Vite)
+            "http://localhost:4200",             // Локальная разработка (Angular)
+            "https://angular-api-sklad.vercel.app" // Ваш основной фронтенд на Vercel
+          )
+          .AllowAnyMethod()
+          .AllowAnyHeader()
+          .AllowCredentials()); // Добавьте это, если используете Cookies или Identity
+});
 
 var app = builder.Build();
 

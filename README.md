@@ -1,155 +1,67 @@
-# 📦 Warehouse Management System (Enterprise AI Ecosystem)
+# 📦 Warehouse Management System (High-Performance .NET 10 API)
 
-[🇷🇺 Перейти к русской версии](#-warehouse-management-system-enterprise-ai-ecosystem-ru)
+[🇷🇺 Перейти к русской версии](#-система-управления-складом-high-performance-net-10-api-ru)
 
-A universal full-stack ecosystem for warehouse accounting and intelligent analytics. This project demonstrates the evolution of corporate architecture through three migration stages: from a flexible Python prototype to an enterprise-grade Java 25 standard and a high-performance .NET 10 API.
+A professional enterprise-grade backend implementation built with **.NET 10 (LTS)**. This repository represents the high-performance stage of the ecosystem's architectural evolution, focusing on type safety, architectural integrity, and scalability.
 
-## 🚀 Architectural Concept: Multi-Stack Evolution
-The system is designed following the **API Contract Persistence** principle: the Vue 3 frontend remains unchanged, while the backend engine can be seamlessly replaced without data loss or functional disruption.
+## 🚀 Architectural Excellence: .NET Core Power
+The system is built using **Clean Architecture** principles and **SOLID** design patterns. It provides a robust API for warehouse accounting, designed to handle complex inventory movements with transactional integrity.
 
-## 🛠 Technology Stacks (Backend)
-*   **.NET 10 (LTS):** ASP.NET Core, EF Core, Microsoft Identity, QuestPDF, LINQ.
-*   **Java 25 (LTS):** Spring Boot 3.5, Spring Security, Hibernate (JPA), Streams API.
-*   **Python 3.10:** Django REST Framework (DRF), Django ORM, SimpleJWT, ReportLab.
+## 🛠 Technology Stack
+*   **Runtime:** .NET 10 (LTS)
+*   **Framework:** ASP.NET Core Web API
+*   **ORM:** Entity Framework Core (EF Core)
+*   **Security:** Microsoft Identity & JWT Bearer Authentication
+*   **Database:** PostgreSQL (Primary Relational Store)
+*   **Reporting:** QuestPDF (High-speed PDF generation)
+*   **Data Logic:** LINQ, Task Parallel Library (TPL)
 
-## 🍃 NoSQL & Audit Logging
-*   **MongoDB Integration:** Implemented a high-performance logging system for tracking user actions.
-*   **Activity Tracking:** Every move, income, or stock adjustment is recorded as a JSON document in MongoDB, ensuring a non-blocking audit trail and historical data persistence without overloading the primary relational DB.
+## 🌟 Technical Highlights
 
+### 1. Database Optimization (EF Core)
+Successfully eliminated the **N+1 query problem**:
+*   **Eager Loading:** Strategic use of `.Include()` and `.ThenInclude()` for complex stock movement relationships.
+*   **Read-Only Performance:** Utilizing `.AsNoTracking()` for high-speed dashboard telemetry.
+*   **Filtered Includes:** Optimized LINQ queries to minimize data transfer.
 
-## ✨ Frontend: Angular 19+ (Next-Gen Reactive UI)
-*   **Signals Everywhere:** Full implementation of **Angular Signals** for fine-grained reactivity, replacing zone.js dependency where possible for ultimate performance.
-*   **Modern Architecture:** Standalone Components, Control Flow Syntax (@if, @for), and Functional Interceptors.
-*   **Performance:** Hybrid rendering (SSR/SSG) for instant load times and optimized Change Detection.
-*   **State Management:** Reactive state handling using Signals and RxJS streams.
+### 2. Enterprise Security & Auth
+*   **Stateless JWT:** Implemented via `Microsoft.AspNetCore.Authentication.JwtBearer`.
+*   **Identity System:** Integration with **Microsoft Identity** for robust user management.
+*   **Access Control:** Role-Based Access Control (RBAC) ensuring secure operations.
 
-## 🌟 Deep Technical Expertise
+### 3. DevOps & Deployment
+*   **Docker Multi-stage:** Optimized container images (SDK for build, Runtime for execution).
+*   **CI/CD Ready:** Fully configured for deployment via Render/Azure/GitHub Actions.
 
-### 1. Solving the N+1 Problem (DB Optimization)
-Implemented SQL query minimization strategies across all ORMs:
-*   **.NET:** Utilizing `.Include()` (Eager Loading) and `.AsNoTracking()` for high-speed read operations.
-*   **Django:** Applying `select_related` (for Foreign Keys) and `prefetch_related`.
-*   **Hibernate:** Using `JOIN FETCH` and `FetchType.LAZY` strategies.
+## 🔗 Project Links & Source Code
+*   📂 **GitHub Repository:** [https://github.com](https://github.com)
+*   🌐 **Angular 19 Frontend:** [https://angular-api-sklad.vercel.app](https://angular-api-sklad.vercel.app)
+*   ☁️ **Backend API (Render):** [https://aspent-api-stock.onrender.com](https://aspent-api-stock.onrender.com)
 
-### 2. Stateless Auth & JWT (Security)
-*   Across all stacks, a unified **Stateless JWT** architecture is implemented:
-    **.NET 10:** ASP.NET Core **JwtBearer Authentication** & Microsoft Identity.
-    **Java 25:** **Spring Security** with **JJWT** (Java JWT) integration.
-    **Python:** **Simple JWT** for Django REST Framework.
-
-*   **JWT:** A Stateless architecture was chosen to allow horizontal API scaling in Docker containers without server session affinity.
-*   **Security Flow:** Implemented Role-Based Access Control (RBAC), password hashing (BCrypt/PBKDF2), and a `needsPasswordChange` mechanism (enforced temporary password change on first login).
-*   **CORS Policy:** Strict filtering of trusted Origins to protect the API from unauthorized cross-origin requests.
-
-### 3. DevOps & Containerization
-*   **Docker Multi-stage Build:** Image optimization by separating build (SDK) and runtime stages.
-*   **CI/CD Ready:** Fully prepared for automated deployment via Render, Azure, Vercel, and GitHub Actions.
-
-## 📊 Complex Business Logic
-A real-time inventory balance calculation algorithm has been implemented, accounting for:
-*   Primary Incomes and internal Moves between an unlimited number of warehouses.
-*   **Transactional Integrity:** The database is protected against broken references (Foreign Key Constraints) and cascading errors.
-
-## 🔗 Project Repositories
-*   🚀 **.NET 10 (C# / EF Core):** [aspent_api_stock](https://github.com/maxzakprofessor/aspent_api_stock.git)
-*   ☕ **Java 25 (Spring Boot 3.5):** [JAVA-API-SKLAD](https://github.com/maxzakprofessor/JAVA-API-SKLAD.git)
-*   🐍 **Python (Django DRF):** [drf_api_stock_ai](github.com/maxzakprofessor/drf_api_stock_ai.git)
-*   ✨ **Frontend (Angular 19+):** [angular-api-stock](https://github.com/maxzakprofessor/angular-api-sklad.git)
+## 🔑 Demo Access
+*   **Login:** `admin` 
+*   **Password:** `StocKZ2026$`
+*   *Note: Please allow ~50s for the **"Cold Start"** on the free Render tier during the initial request.*
 
 ## 👨‍💻 Developer
 **Zakiryanov M.M.**  
-Fullstack Developer and System Migration Architect.  
-
-## 📺 Video Presentation
-[Watch Sklad Pro AI Demo (OneDrive)](https://1drv.ms/v/c/f07141fbcbb39609/IQCqTOpBmzeSSJnZTzPWCto4AQcHprcYbQz-J_JbNYNCcbk?e=bTkgfr)
-
-## 🌐 Live Demo Stands
-*   ☁️ **Backend ASP.NET Core API (Render):** [Render](https://aspent-api-stock.onrender.com/api/goods))
-*   ☁️ **Backend (Pythonanywhere):** [Admin Panel](https://mzakiryanovgmailcom.pythonanywhere.com/admin/login/?next=/admin/)
-*   ☁️ **Frontend (Vercel):** [angular-api-stock.vercel.app](https://angular-api-sklad.vercel.app/)
-
-## ✅ Project Status
-*   **Identity & JWT:** 🔐 (Stable)
-*   **DB Performance (N+1 Fixed):** 🚀 (Optimized)
-*   **Cloud Deployment:** ☁️ (Render/Vercel Live)
-*   **AI Analysis:** 🤖 (Gemini 2.0 Integrated)
+Fullstack Developer and System Migration Architect.
 
 ---
 
-# 📦 Warehouse Management System (Enterprise AI Ecosystem) [RU]
+# 📦 Система управления складом (High-Performance .NET 10 API) [RU]
 
-[🇺🇸 Switch to English](#-warehouse-management-system-enterprise-ai-ecosystem)
+[🇺🇸 Switch to English](#-warehouse-management-system-high-performance-net-10-api)
 
-Универсальная Fullstack-экосистема складского учета и интеллектуальной аналитики.  
-Проект демонстрирует эволюцию корпоративной архитектуры через три этапа миграции: от гибкого прототипа на Python, к корпоративному стандарту на Java 25 и высокопроизводительному API на .NET 10.
+Профессиональная реализация бэкенда на базе **.NET 10 (LTS)**. Ориентирована на строгую типизацию, чистоту архитектуры (SOLID) и высокую производительность.
 
-## 🚀 Архитектурная концепция: Multi-Stack Evolution
-Система спроектирована по принципу **API Contract Persistence**: фронтенд на Vue 3 остается неизменным, в то время как бэкенд-движок может быть бесшовно заменен без потери данных или функционала.
+## 🛠 Технологический стек
+*   **.NET 10 / ASP.NET Core API**
+*   **Entity Framework Core:** Решение проблемы N+1 и оптимизация запросов.
+*   **Microsoft Identity:** Безопасная аутентификация и RBAC (роли).
+*   **PostgreSQL:** Реляционное хранилище.
 
-## 🛠 Технологические стеки (Backend)
-*   **.NET 10 (LTS):** ASP.NET Core, EF Core, Microsoft Identity, QuestPDF, LINQ.
-*   **Java 25 (LTS):** Spring Boot 3.5, Spring Security, Hibernate (JPA), Streams API.
-*   **Python 3.10:** Django REST Framework (DRF), Django ORM, SimpleJWT, ReportLab.
-
-## 🍃 NoSQL и логирование (MongoDB)
-*   **Интеграция MongoDB:** Реализована система высокопроизводительного логирования (Auditing) действий пользователей.
-*   **Запись событий:** Каждое действие (приемка ТМЦ, перемещение между складами или корректировка) фиксируется в виде JSON-документа. Это обеспечивает отказоустойчивость истории операций без нагрузки на основную реляционную БД.
-
-
-## ✨ Frontend: Angular 19+ (Реактивность нового поколения)
-*   **Angular Signals:** Полный переход на Сигналы для мелкозернистой реактивности и максимальной производительности интерфейса.
-*   **Modern Core:** Использование Standalone Components, нового синтаксиса Control Flow (@if, @for) и функциональных Interceptors.
-*   **Performance:** Оптимизированный рендеринг (SSR) и эффективное управление состоянием без лишних перерисовок.
-
-
-## 🌟 Глубокая техническая экспертиза
-
-### 1. Решение проблемы N+1 (Оптимизация БД)
-Реализованы стратегии минимизации SQL-запросов во всех ORM:
-*   **.NET:** Использование `.Include()` (Eager Loading) и `.AsNoTracking()` для высокоскоростного чтения.
-*   **Django:** Применение `select_related` (для Foreign Keys) и `prefetch_related`.
-*   **Hibernate:** Использование `JOIN FETCH` и стратегии `FetchType.LAZY`.
-
-### 2. Stateless Auth & JWT (Безопасность)
-*   Во всех стеках реализована единая **Stateless JWT** архитектура:
-    **.NET 10:** **JwtBearer Authentication** и Microsoft Identity.
-    **Java 25:** **Spring Security** с интеграцией **JJWT** (Java JWT).
-    **Python:** **Simple JWT** для Django REST Framework.
-    **Безопасность:** Ролевая модель (RBAC), хэширование BCrypt/PBKDF2 и принудительная смена пароля.
-
-*   **JWT:** Выбрана Stateless-архитектура, позволяющая масштабировать API горизонтально в Docker-контейнерах без привязки к сессиям сервера.
-*   **Security Flow:** Реализована ролевая модель (RBAC), хэширование паролей (BCrypt/PBKDF2) и механизм `needsPasswordChange` (обязательная смена временного пароля при первом входе).
-*   **CORS Policy:** Настроена строгая фильтрация доверенных источников (Origins), защищающая API от несанкционированного доступа.
-
-### 3. DevOps & Контейнеризация
-*   **Docker Multi-stage Build:** Оптимизация образов через разделение стадий сборки (SDK) и запуска (Runtime).
-*   **CI/CD Ready:** Полная готовность к автоматизированному деплою на Render, Azure, Vercel и GitHub Actions.
-
-## 📊 Сложная бизнес-логика
-Реализован алгоритм расчета остатков ТМЦ в реальном времени, учитывающий:
-*   Первичные поступления (Incomes) и внутренние перемещения (Moves) между неограниченным количеством складов.
-*   **Транзакционную целостность:** база защищена от «битых» ссылок (Foreign Key Constraints) и каскадных ошибок.
-
-## 🔗 Репозитории проекта
-*   🚀 **.NET 10 (C# / EF Core):** [aspent_api_stock](https://github.com/maxzakprofessor/aspent_api_stock.git)
-*   ☕ **Java 25 (Spring Boot 3.5):** [JAVA-API-SKLAD](https://github.com/maxzakprofessor/JAVA-API-SKLAD.git)
-*   🐍 **Python (Django DRF):** [drf_api_stock_ai](github.com/maxzakprofessor/drf_api_stock_ai.git)
-*   ✨ **Frontend (Angular 19+):** [angular-api-stock](https://github.com/maxzakprofessor/angular-api-sklad.git)
-
-## 👨‍💻 Разработчик
-**Закирьянов М.М.**  
-Fullstack-разработчик и архитектор миграции систем.
-
-## 📺 Видео-презентация системы
-[Смотреть демонстрацию Sklad Pro AI (OneDrive)](https://1drv.ms/v/c/f07141fbcbb39609/IQCqTOpBmzeSSJnZTzPWCto4AQcHprcYbQz-J_JbNYNCcbk?e=bTkgfr)
-
-## 🌐 Демо-стенды в облаке
-*   ☁️ **Backend ASP.NET Core API (Render):** [Render](https://aspent-api-stock.onrender.com/api/goods))
-*   ☁️ **Backend (Pythonanywhere):** [Панель администратора](https://mzakiryanovgmailcom.pythonanywhere.com)
-*   ☁️ **Frontend (Vercel):** [angular-api-stock.vercel.app](https://angular-api-sklad.vercel.app/)
-
-## ✅ Статус проекта
-*   **Identity & JWT:** 🔐 (Стабильно)
-*   **DB Performance (N+1 Fixed):** 🚀 (Оптимизировано)
-*   **Cloud Deployment:** ☁️ (Render/Vercel Live)
-*   **AI Analysis:** 🤖 (Gemini 2.0 Integrated)
+## 🔗 Ссылки проекта
+*   📂 **Исходный код (GitHub):** [https://github.com](https://github.com)
+*   🌐 **Frontend (Angular 19):** [https://angular-api-sklad.vercel.app](https://angular-api-sklad.vercel.app)
+*   🔑 **Логин:** `admin` | **Пароль:** `StocKZ2026$`
