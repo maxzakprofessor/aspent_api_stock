@@ -48,7 +48,7 @@ A real-time inventory balance calculation algorithm has been implemented, accoun
 *   🚀 **.NET 10 (C# / EF Core):** [aspent_api_stock](https://github.com/maxzakprofessor/aspent_api_stock.git)
 *   ☕ **Java 25 (Spring Boot 3.5):** [JAVA-API-SKLAD](https://github.com/maxzakprofessor/JAVA-API-SKLAD.git)
 *   🐍 **Python (Django DRF):** [drf_api_stock_ai](github.com/maxzakprofessor/drf_api_stock_ai.git)
-*   ✨ **Frontend (Angular 19+):** [vue-api-stock](https://github.com/maxzakprofessor/angular-api-sklad.git)
+*   ✨ **Frontend (Angular 19+):** [angular-api-stock](https://github.com/maxzakprofessor/angular-api-sklad.git)
 
 ## 👨‍💻 Developer
 **Zakiryanov M.M.**  
@@ -60,7 +60,7 @@ Fullstack Developer and System Migration Architect.
 ## 🌐 Live Demo Stands
 *   ☁️ **Backend ASP.NET Core API (Render):** `aspent-api-stock.onrender.com`
 *   ☁️ **Backend (Pythonanywhere):** [Admin Panel](https://mzakiryanovgmailcom.pythonanywhere.com)
-*   ☁️ **Frontend (Vercel):** [vue-api-stock.vercel.app](https://angular-api-sklad.vercel.app/)
+*   ☁️ **Frontend (Vercel):** [angular-api-stock.vercel.app](https://angular-api-sklad.vercel.app/)
 
 ## ✅ Project Status
 *   **Identity & JWT:** 🔐 (Stable)
@@ -121,7 +121,7 @@ Fullstack Developer and System Migration Architect.
 *   🚀 **.NET 10 (C# / EF Core):** [aspent_api_stock](https://github.com/maxzakprofessor/aspent_api_stock.git)
 *   ☕ **Java 25 (Spring Boot 3.5):** [JAVA-API-SKLAD](https://github.com/maxzakprofessor/JAVA-API-SKLAD.git)
 *   🐍 **Python (Django DRF):** [drf_api_stock_ai](github.com/maxzakprofessor/drf_api_stock_ai.git)
-*   ✨ **Frontend (Angular 19+):** [vue-api-stock](https://github.com/maxzakprofessor/angular-api-sklad.git)
+*   ✨ **Frontend (Angular 19+):** [angular-api-stock](https://github.com/maxzakprofessor/angular-api-sklad.git)
 
 ## 👨‍💻 Разработчик
 **Закирьянов М.М.**  
@@ -133,7 +133,7 @@ Fullstack-разработчик и архитектор миграции сис
 ## 🌐 Демо-стенды в облаке
 *   ☁️ **Backend ASP.NET Core API (Render):** `aspent-api-stock.onrender.com`
 *   ☁️ **Backend (Pythonanywhere):** [Панель администратора](https://mzakiryanovgmailcom.pythonanywhere.com)
-*   ☁️ **Frontend (Vercel):** [vue-api-stock.vercel.app](https://angular-api-sklad.vercel.app/)
+*   ☁️ **Frontend (Vercel):** [angular-api-stock.vercel.app](https://angular-api-sklad.vercel.app/)
 
 ## ✅ Статус проекта
 *   **Identity & JWT:** 🔐 (Стабильно)
