@@ -20,7 +20,29 @@ public class AuthController : ControllerBase
         _signInManager = signInManager;
     }
 
- 
+    [HttpPost("signin")]
+    public async Task<IActionResult> Login([FromBody] LoginRequest request)
+    {
+        var user = await _userManager.FindByNameAsync(request.Username);
+        if (user != null && await _userManager.CheckPasswordAsync(user, request.Password))
+        {
+            var key = Encoding.ASCII.GetBytes("SuperSecretKey12345678901234567890");
+            var tokenDescriptor = new SecurityTokenDescriptor {
+                Subject = new ClaimsIdentity(new[] { new Claim(ClaimTypes.Name, user.UserName!) }),
+                Expires = DateTime.UtcNow.AddDays(7),
+                SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
+            };
+            var tokenHandler = new JwtSecurityTokenHandler();
+            var token = tokenHandler.CreateToken(tokenDescriptor);
+            
+            return Ok(new { 
+                access = tokenHandler.WriteToken(token),
+                username = user.UserName,
+                needsPasswordChange = user.LockoutEnd == null 
+            });
+        }
+        return Unauthorized();
+    }
 
     [HttpPost("update-password")]
     public async Task<IActionResult> UpdatePassword([FromBody] UpdatePasswordRequest request)
