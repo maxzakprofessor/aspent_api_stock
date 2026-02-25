@@ -50,8 +50,8 @@ public class AnalyticsController : ControllerBase
     public async Task<IActionResult> GetPdf(string wStock, string wGood)
     {
         var data = await CalculateBalances();
-        if (wStock != "Все") data = data.Where(r => r.NameStock == wStock).ToList();
-        if (wGood != "Все") data = data.Where(r => r.NameGood == wGood).ToList();
+        if (wStock != "All") data = data.Where(r => r.NameStock == wStock).ToList();
+        if (wGood != "All") data = data.Where(r => r.NameGood == wGood).ToList();
 
         var pdf = Document.Create(container => {
             container.Page(page => {
