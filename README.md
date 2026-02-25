@@ -12,6 +12,11 @@ The system is designed following the **API Contract Persistence** principle: the
 *   **Java 25 (LTS):** Spring Boot 3.5, Spring Security, Hibernate (JPA), Streams API.
 *   **Python 3.10:** Django REST Framework (DRF), Django ORM, SimpleJWT, ReportLab.
 
+## 🍃 NoSQL & Audit Logging
+*   **MongoDB Integration:** Implemented a high-performance logging system for tracking user actions.
+*   **Activity Tracking:** Every move, income, or stock adjustment is recorded as a JSON document in MongoDB, ensuring a non-blocking audit trail and historical data persistence without overloading the primary relational DB.
+
+
 ## ✨ Frontend & AI-Driven Development
 *   **Frontend:** Vue 3 (Composition API), Vite, Pinia, Axios Interceptors, Chart.js.
 *   **AI & Prompt Engineering:** Leveraging Gemini 2.0 Flash and GitHub Copilot for business logic generation and architectural refactoring.
@@ -84,6 +89,11 @@ Fullstack Developer and System Migration Architect.
 *   **.NET 10 (LTS):** ASP.NET Core, EF Core, Microsoft Identity, QuestPDF, LINQ.
 *   **Java 25 (LTS):** Spring Boot 3.5, Spring Security, Hibernate (JPA), Streams API.
 *   **Python 3.10:** Django REST Framework (DRF), Django ORM, SimpleJWT, ReportLab.
+
+## 🍃 NoSQL и логирование (MongoDB)
+*   **Интеграция MongoDB:** Реализована система высокопроизводительного логирования (Auditing) действий пользователей.
+*   **Запись событий:** Каждое действие (приемка ТМЦ, перемещение между складами или корректировка) фиксируется в виде JSON-документа. Это обеспечивает отказоустойчивость истории операций без нагрузки на основную реляционную БД.
+
 
 ## ✨ Frontend & AI-Driven Development
 *   **Frontend:** Vue 3 (Composition API), Vite, Pinia, Axios Interceptors, Chart.js.
