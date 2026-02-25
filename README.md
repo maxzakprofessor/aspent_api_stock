@@ -17,10 +17,11 @@ The system is designed following the **API Contract Persistence** principle: the
 *   **Activity Tracking:** Every move, income, or stock adjustment is recorded as a JSON document in MongoDB, ensuring a non-blocking audit trail and historical data persistence without overloading the primary relational DB.
 
 
-## ✨ Frontend & AI-Driven Development
-*   **Frontend:** Vue 3 (Composition API), Vite, Pinia, Axios Interceptors, Chart.js.
-*   **AI & Prompt Engineering:** Leveraging Gemini 2.0 Flash and GitHub Copilot for business logic generation and architectural refactoring.
-*   **Data Science:** Utilizing ChatGPT Advanced Data Analysis to verify mathematical models for inventory calculation.
+## ✨ Frontend: Angular 19+ (Next-Gen Reactive UI)
+*   **Signals Everywhere:** Full implementation of **Angular Signals** for fine-grained reactivity, replacing zone.js dependency where possible for ultimate performance.
+*   **Modern Architecture:** Standalone Components, Control Flow Syntax (@if, @for), and Functional Interceptors.
+*   **Performance:** Hybrid rendering (SSR/SSG) for instant load times and optimized Change Detection.
+*   **State Management:** Reactive state handling using Signals and RxJS streams.
 
 ## 🌟 Deep Technical Expertise
 
